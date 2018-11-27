@@ -6,19 +6,19 @@
 3. clone the repository 
 4. ./prereqs-ubuntu.sh
 
-##Setup Geth.
+## Setup Geth.
 1. sudo apt-get install software-properties-common
 2. sudo add-apt-repository -y ppa:ethereum/ethereum
 3. sudo apt-get update
 4. sudo apt-get install ethereum
 
-##Start Network.
+## Start Network.
 1. Create new account: geth --datadir=./EthereumPrivateNetwork/ account new
 2. Replace "account address" in genesis.json
 3. Init data: geth --datadir=./EthereumPrivateNetwork/ init ./EthereumPrivateNetwork/genesis.json
 4. Run command geth: geth --identity "process-node"  --datadir=./EthereumPrivateNetwork/ --mine --minerthreads=1 --rpc --rpcaddr "0.0.0.0" --rpcport 8545 --rpcapi="db,eth,net,web3,personal" --rpccorsdomain "*"
 
-##Mist Wallet.
+## Mist Wallet.
 1. Download https://github.com/ethereum/mist/releases/tag/v0.10.0
 2. Extract zip file.
 3. ./mist  --rpc ~/EthereumPrivateNetwork/geth.ipc
@@ -29,7 +29,7 @@
 2. deploy SmartContract.
 3. transfer Token.
 
-##Setup eth-explorer:
+## Setup eth-explorer:
 1. git clone https://github.com/carsenk/explorer
 2. cd explorer/
 3. npm install
@@ -37,7 +37,7 @@
 5. bower install
 6. npm start
 
-##Setup eth-netstats:
+## Setup eth-netstats:
 1. git clone https://github.com/cubedro/eth-netstats
 2. cd eth-netstats
 3. npm install
@@ -45,7 +45,7 @@
 5. grunt
 6. WS_SECRET=my_secret npm start
 
-##Setup eth-net-intelligence-api:
+## Setup eth-net-intelligence-api:
 1. git clone https://github.com/cubedro/eth-net-intelligence-api
 2. cd eth-net-intelligence-api
 3. npm install
